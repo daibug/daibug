@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "daibug-web (Next.js landing page)",
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "web/daibug-web",
+      "port": 3000
+    }
+  ]
+}
