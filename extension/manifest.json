@@ -2,9 +2,16 @@
   "manifest_version": 3,
   "name": "Daibug",
   "version": "0.1.0",
-  "description": "Browser-to-CLI AI debugging bridge — streams console, network, and DOM events to the Daibug Hub",
-  "permissions": ["storage", "scripting", "tabs"],
-  "host_permissions": ["http://127.0.0.1:*/*", "http://localhost:*/*"],
+  "description": "Browser-to-CLI AI debugging bridge \u00e2\u20ac\u201d streams console, network, and DOM events to the Daibug Hub",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:*/*",
+    "http://localhost:*/*"
+  ],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:* ws://127.0.0.1:* ws://localhost:*"
   },
@@ -13,15 +20,25 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://localhost/*", "http://127.0.0.1/*"],
-      "js": ["content.js"],
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_start"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["page-context.js"],
-      "matches": ["http://localhost/*", "http://127.0.0.1/*"]
+      "resources": [
+        "page-context.js"
+      ],
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ]
     }
   ],
   "devtools_page": "devtools.html",
@@ -29,5 +46,6 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4W2rwc83rfffRyuA7lBtMtpQHd3r/rL2BscPsKMMze6wEgXi2hHa/y7nYy0rmJvPhh6XizmK3I09q8hV2zm8BKC36DMGRCotveJpz6HENDD9gbob0GqJnCahKNysW+5VPYdvTO0QSeObaYnHuuWZGBiqJ0zsedc59anBRrSkr2TRPWSni/hDQD5UdidutzV0M49+nC5L8g4MGoSrLJErzD7G9sz1fWI43D4WzNXf/0nnB1WJXig3SxwobXAT8YN3qYgHRYMgYZPHMi86qvlmot2Anzxfny2dEzv4l0SZU+7W/7HSCXTdOwsStFz1GVjrqh9sXGwSbsJ2md+VGmV1IwIDAQAB"
 }
