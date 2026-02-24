@@ -6,3 +6,6 @@ coverage/
 .DS_Store
 *.crx
 *.pem
+extension-zips/
+extension-pack-stage/
+web/
