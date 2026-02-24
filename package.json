@@ -1,0 +1,61 @@
+{
+  "name": "daibug",
+  "version": "0.1.0",
+  "description": "Browser-to-CLI AI debugging bridge. Gives AI coding agents real-time visibility into your running browser.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daibug/daibug"
+  },
+  "homepage": "https://daibug.nextbyts.com",
+  "keywords": [
+    "debugging",
+    "ai",
+    "mcp",
+    "browser",
+    "devtools",
+    "claude",
+    "developer-tools",
+    "chrome-extension",
+    "frontend",
+    "console"
+  ],
+  "bin": {
+    "daibug": "./dist/index.js",
+    "daibug-mcp": "./dist/mcp-stdio.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outfile dist/index.js --target node && bun build src/mcp-stdio.ts --outfile dist/mcp-stdio.js --target node && node -e \"const fs=require('fs');['dist/index.js','dist/mcp-stdio.js'].forEach(f=>{const c=fs.readFileSync(f,'utf8');if(!c.startsWith('#!'))fs.writeFileSync(f,'#!/usr/bin/env node\\n'+c)})\"",
+    "prepublishOnly": "npm run build",
+    "test": "bun test tests/phase1 tests/phase2/source-detection.test.ts tests/phase2/hub-browser-events.test.ts tests/phase2/extension-structure.test.ts tests/phase3",
+    "test:coverage": "bun test --coverage",
+    "test:e2e": "vitest run --config vitest.config.e2e.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.10",
+    "bun-types": "^1.3.9",
+    "playwright": "^1.58.2",
+    "typescript": "^5.3.0",
+    "vitest": "^4.0.18"
+  }
+}
