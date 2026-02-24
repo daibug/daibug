@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/daibug/daibug/main/logo.png" alt="daibug" width="120" />
+</p>
+
 # daibug
 
 > The missing wire between your browser and your AI agent.

@@ -33,6 +33,7 @@
     "dist/",
     "README.md",
     "LICENSE",
+    "logo.png",
     "package.json"
   ],
   "engines": {
