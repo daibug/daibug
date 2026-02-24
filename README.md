@@ -66,9 +66,11 @@ npm install -g daibug
 
 ### Browser Extension
 
-[Chrome Web Store link — coming soon]
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/oajnkedpacofnchggifpdjopenkcdhde?label=Chrome%20Web%20Store)](https://chromewebstore.google.com/detail/daibug/oajnkedpacofnchggifpdjopenkcdhde)
 
-For now, sideload from the `extension/` directory:
+[Install from Chrome Web Store](https://chromewebstore.google.com/detail/daibug/oajnkedpacofnchggifpdjopenkcdhde) *(pending review)*
+
+Or sideload from the `extension/` directory:
 
 1. Open `chrome://extensions`
 2. Enable Developer Mode
